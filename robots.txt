@@ -1,1 +1,7 @@
-Sitemap: https://www.khabara-maintenance.com/sitemap.xml
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+Sitemap: https://khabaramaintenance.it.com/sitemap.xml

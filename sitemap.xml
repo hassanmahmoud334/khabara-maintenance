@@ -1,183 +1,114 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
-    <!-- Homepage - Highest Priority -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/</loc>
-        <lastmod>2023-12-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    
-    <!-- Water Leak Detection Services -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/leak-detection/</loc>
-        <lastmod>2023-12-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Surface Insulation Services -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/roof-insulation/</loc>
-        <lastmod>2023-12-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Tank Insulation Services -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/tank-insulation/</loc>
-        <lastmod>2023-12-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Swimming Pool Leak Detection -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/services/pool-leak-detection/</loc>
-        <lastmod>2023-11-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Tank Leak Detection -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/services/tank-leak-detection/</loc>
-        <lastmod>2023-11-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Kitchen Leak Detection -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/services/kitchen-leak-detection/</loc>
-        <lastmod>2023-11-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Bathroom Leak Detection -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/services/bathroom-leak-detection/</loc>
-        <lastmod>2023-11-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Foam Insulation -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/services/foam-insulation/</loc>
-        <lastmod>2023-11-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Polymer Insulation -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/services/polymer-insulation/</loc>
-        <lastmod>2023-11-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Detection Equipment -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/equipment/</loc>
-        <lastmod>2023-11-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Insulation Materials -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/materials/</loc>
-        <lastmod>2023-11-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- About Us -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/about/</loc>
-        <lastmod>2023-10-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <!-- Contact Us -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/contact/</loc>
-        <lastmod>2023-12-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- FAQ Page -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/faq/</loc>
-        <lastmod>2023-10-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <!-- Blog/Articles -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/blog/</loc>
-        <lastmod>2023-12-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Blog Article 1 -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/blog/types-of-water-leaks/</loc>
-        <lastmod>2023-11-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <!-- Blog Article 2 -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/blog/benefits-of-proper-insulation/</loc>
-        <lastmod>2023-11-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <!-- Blog Article 3 -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/blog/preventing-water-damage/</loc>
-        <lastmod>2023-11-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <!-- Service Areas - Riyadh -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/service-areas/riyadh/</loc>
-        <lastmod>2023-10-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Privacy Policy -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/privacy-policy/</loc>
-        <lastmod>2023-01-15</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    
-    <!-- Terms of Service -->
-    <url>
-        <loc>https://www.khabara-maintenance.com/terms-of-service/</loc>
-        <lastmod>2023-01-15</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خريطة الموقع | خبراء الصيانة</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a5fb4;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sitemap-section {
+            margin-bottom: 30px;
+        }
+        .sitemap-section h2 {
+            color: #26a269;
+            border-bottom: 2px solid #26a269;
+            padding-bottom: 10px;
+        }
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+        }
+        .sitemap-list li {
+            margin: 10px 0;
+            padding: 8px;
+            border-right: 3px solid #1a5fb4;
+            background: #f8f9fa;
+        }
+        .sitemap-list a {
+            text-decoration: none;
+            color: #2e3436;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .sitemap-list a:hover {
+            color: #1a5fb4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>خريطة الموقع - خبراء الصيانة</h1>
+        
+        <div class="sitemap-section">
+            <h2>الصفحات الرئيسية</h2>
+            <ul class="sitemap-list">
+                <li><a href="https://khabaramaintenance.it.com/">الصفحة الرئيسية</a></li>
+                <li><a href="https://khabaramaintenance.it.com/about/">من نحن</a></li>
+                <li><a href="https://khabaramaintenance.it.com/contact/">اتصل بنا</a></li>
+            </ul>
+        </div>
 
-</urlset>
+        <div class="sitemap-section">
+            <h2>خدمات كشف التسربات</h2>
+            <ul class="sitemap-list">
+                <li><a href="https://khabaramaintenance.it.com/leak-detection/">كشف تسربات المياه</a></li>
+                <li><a href="https://khabaramaintenance.it.com/services/pool-leak-detection/">كشف تسربات المسابح</a></li>
+                <li><a href="https://khabaramaintenance.it.com/services/tank-leak-detection/">كشف تسربات الخزانات</a></li>
+                <li><a href="https://khabaramaintenance.it.com/services/kitchen-leak-detection/">كشف تسربات المطابخ</a></li>
+                <li><a href="https://khabaramaintenance.it.com/services/bathroom-leak-detection/">كشف تسربات الحمامات</a></li>
+            </ul>
+        </div>
+
+        <div class="sitemap-section">
+            <h2>خدمات العزل</h2>
+            <ul class="sitemap-list">
+                <li><a href="https://khabaramaintenance.it.com/roof-insulation/">عزل الأسطح</a></li>
+                <li><a href="https://khabaramaintenance.it.com/tank-insulation/">عزل الخزانات</a></li>
+                <li><a href="https://khabaramaintenance.it.com/services/foam-insulation/">عزل الفوم</a></li>
+                <li><a href="https://khabaramaintenance.it.com/services/polymer-insulation/">عزل البوليمر</a></li>
+            </ul>
+        </div>
+
+        <div class="sitemap-section">
+            <h2>المقالات والمعلومات</h2>
+            <ul class="sitemap-list">
+                <li><a href="https://khabaramaintenance.it.com/blog/">المدونة</a></li>
+                <li><a href="https://khabaramaintenance.it.com/blog/types-of-water-leaks/">أنواع تسربات المياه</a></li>
+                <li><a href="https://khabaramaintenance.it.com/blog/benefits-of-proper-insulation/">فوائد العزل الصحيح</a></li>
+                <li><a href="https://khabaramaintenance.it.com/blog/preventing-water-damage/">الوقاية من أضرار المياه</a></li>
+                <li><a href="https://khabaramaintenance.it.com/faq/">الأسئلة الشائعة</a></li>
+            </ul>
+        </div>
+
+        <div class="sitemap-section">
+            <h2>معلومات إضافية</h2>
+            <ul class="sitemap-list">
+                <li><a href="https://khabaramaintenance.it.com/equipment/">الأجهزة والمعدات</a></li>
+                <li><a href="https://khabaramaintenance.it.com/materials/">مواد العزل</a></li>
+                <li><a href="https://khabaramaintenance.it.com/service-areas/riyadh/">مناطق الخدمة - الرياض</a></li>
+                <li><a href="https://khabaramaintenance.it.com/privacy-policy/">سياسة الخصوصية</a></li>
+                <li><a href="https://khabaramaintenance.it.com/terms-of-service/">شروط الخدمة</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
