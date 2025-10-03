@@ -16,6 +16,15 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png">
     
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"></noscript>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="خبراء الصيانة - شركة كشف تسربات المياه وعزل الأسطح والخزانات">
     <meta property="og:description" content="شركة معتمدة لكشف التسربات وعزل الأسطح والخزانات. خبرة 25 عاماً في كشف وحل مشاكل التسربات والعزل.">
@@ -34,40 +43,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://khabaramaintenance.it.com">
     
-    <!-- Structured Data for Google Search -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "خبراء الصيانة",
-      "url": "https://khabaramaintenance.it.com",
-      "logo": "https://khabaramaintenance.it.com/favicon.png",
-      "description": "شركة معتمدة لكشف تسربات المياه وعزل الأسطح والخزانات. خبرة 25 عاماً في حل مشاكل التسربات والعزل باختلاف شدتها وأماكن حدوثها.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "الرياض",
-        "addressRegion": "منطقة الرياض",
-        "addressCountry": "SA"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+966-537705361",
-        "contactType": "customer service",
-        "areaServed": "SA",
-        "availableLanguage": "ar"
-      },
-      "sameAs": []
-    }
-    </script>
-    
-    <!-- Google Fonts for Arabic -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <!-- Critical CSS - Inline for above-the-fold content -->
     <style>
         :root {
             --primary-color: #1a5fb4;
@@ -107,23 +83,13 @@
             padding: 0 15px;
         }
         
-        /* Header Styles - IMPROVED */
+        /* Header Styles - Critical */
         header {
             background-color: white;
             box-shadow: var(--box-shadow);
             position: sticky;
             top: 0;
             z-index: 1000;
-            animation: slideDown 0.4s ease;
-        }
-        
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
         }
         
         .header-container {
@@ -214,11 +180,9 @@
             background-color: rgba(26, 95, 180, 0.1);
         }
         
-        /* Hero Section - IMPROVED */
+        /* Hero Section - Critical */
         .hero {
-            background: linear-gradient(rgba(26, 95, 180, 0.8), rgba(13, 71, 161, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%231a5fb4"/><text x="50%" y="50%" font-family="Arial" font-size="60" fill="white" text-anchor="middle">خبراء الصيانة</text></svg>');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(26, 95, 180, 0.8), rgba(13, 71, 161, 0.9));
             color: white;
             padding: 80px 0;
             text-align: center;
@@ -240,18 +204,6 @@
         .hero .container {
             position: relative;
             z-index: 2;
-            animation: fadeInUp 1s ease;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         
         .hero h1 {
@@ -279,23 +231,6 @@
             border: none;
             cursor: pointer;
             font-family: inherit;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: var(--transition);
-        }
-        
-        .btn:hover:before {
-            right: 100%;
         }
         
         .btn:hover {
@@ -303,811 +238,46 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-        
-  .services-overview {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 3px;
-            background: var(--primary-color);
-            bottom: -10px;
-            right: 25%;
-            border-radius: 2px;
-        }
-        
-        .section-title p {
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .services-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-overview-card {
-            background-color: var(--light-color);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            text-align: center;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-overview-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--primary-color);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: var(--transition);
-        }
-        
-        .service-overview-card:hover:before {
-            transform: scaleX(1);
-        }
-        
-        .service-overview-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            transition: var(--transition);
-        }
-        
-        .service-overview-card:hover .service-icon {
-            transform: scale(1.1);
-        }
-        
-        .service-overview-card h3 {
-            margin-bottom: 15px;
-            color: var(--dark-color);
-        }
-        
-        /* Water Leak Detection Section */
-        .water-leak-detection {
-            padding: 80px 0;
-            background-color: #f0f4f8;
-        }
-        
-        .leak-types {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        
-        .leak-type {
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 25px;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            border-right: 4px solid var(--primary-color);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .leak-type:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-        
-        .leak-type:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        
-        .leak-type:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-        
-        .leak-type:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .leak-type h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        /* Insulation Section */
-        .insulation {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .insulation-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .insulation-types {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .insulation-type {
-            background-color: var(--light-color);
-            border-radius: var(--border-radius);
-            padding: 25px;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .insulation-type:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-        
-        .insulation-type:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        
-        .insulation-type:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .insulation-type h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .benefits-list {
-            list-style-type: none;
-            margin-top: 20px;
-        }
-        
-        .benefits-list li {
-            margin-bottom: 10px;
-            padding-right: 25px;
-            position: relative;
-            transition: var(--transition);
-        }
-        
-        .benefits-list li:hover {
-            transform: translateX(-5px);
-        }
-        
-        .benefits-list li:before {
-            content: "✓";
-            color: var(--secondary-color);
-            font-weight: bold;
-            position: absolute;
-            right: 0;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background-color: #f0f4f8;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 30px;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .feature-card:nth-child(1) { animation-delay: 0.1s; }
-        .feature-card:nth-child(2) { animation-delay: 0.2s; }
-        .feature-card:nth-child(3) { animation-delay: 0.3s; }
-        .feature-card:nth-child(4) { animation-delay: 0.4s; }
-        .feature-card:nth-child(5) { animation-delay: 0.5s; }
-        .feature-card:nth-child(6) { animation-delay: 0.6s; }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            transition: var(--transition);
-        }
-        
-        .feature-card:hover .feature-icon {
-            transform: rotateY(180deg);
-        }
-        
-        .feature-card h3 {
-            margin-bottom: 15px;
-            color: var(--dark-color);
-        }
-        
-        /* Services Details Section */
-        .services-details {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
-        .service-card:nth-child(5) { animation-delay: 0.5s; }
-        .service-card:nth-child(6) { animation-delay: 0.6s; }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-            background-color: var(--primary-color);
-        }
-        
-        .service-card:hover .service-img {
-            transform: scale(1.05);
-        }
-        
-        .service-content {
-            padding: 20px;
-        }
-        
-        .service-content h3 {
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-        
-        /* Devices Section */
-        .devices {
-            padding: 80px 0;
-            background-color: #f0f4f8;
-        }
-        
-        .devices-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .device-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 25px;
-            text-align: center;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .device-card:nth-child(1) { animation-delay: 0.1s; }
-        .device-card:nth-child(2) { animation-delay: 0.2s; }
-        .device-card:nth-child(3) { animation-delay: 0.3s; }
-        .device-card:nth-child(4) { animation-delay: 0.4s; }
-        
-        .device-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .device-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-            transition: var(--transition);
-        }
-        
-        .device-card:hover .device-icon {
-            transform: scale(1.1);
-        }
-        
-        /* Materials Section */
-        .materials {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .materials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .material-card {
-            background-color: var(--light-color);
-            border-radius: var(--border-radius);
-            padding: 25px;
-            text-align: center;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .material-card:nth-child(1) { animation-delay: 0.1s; }
-        .material-card:nth-child(2) { animation-delay: 0.2s; }
-        .material-card:nth-child(3) { animation-delay: 0.3s; }
-        .material-card:nth-child(4) { animation-delay: 0.4s; }
-        
-        .material-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .material-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-            transition: var(--transition);
-        }
-        
-        .material-card:hover .material-icon {
-            transform: rotate(15deg);
-        }
-        
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, var(--secondary-color), #1f8b4d);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
-            background-size: cover;
-        }
-        
-        .cta .container {
-            position: relative;
-            z-index: 1;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.02);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-        
-        .cta h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-        
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-        }
-        
-        .btn-light {
-            background-color: white;
-            color: var(--secondary-color);
-        }
-        
-        .btn-light:hover {
-            background-color: #f5f5f5;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 80px 0;
-            background-color: var(--dark-color);
-            color: white;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-        
-        .contact-info h3, .contact-form h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-        }
-        
-        .contact-details {
-            list-style: none;
-        }
-        
-        .contact-details li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
-        }
-        
-        .contact-details li:hover {
-            transform: translateX(-5px);
-        }
-        
-        .contact-details i {
-            width: 20px;
-        }
-        
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        
-        .form-group label {
-            font-weight: 600;
-        }
-        
-        .form-group input, .form-group textarea, .form-group select {
-            padding: 12px;
-            border-radius: var(--border-radius);
-            border: none;
-            font-family: inherit;
-            transition: var(--transition);
-        }
-        
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px var(--primary-color);
-        }
-        
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #1a1a1a;
-            color: white;
-            padding: 40px 0 20px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .copyright {
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            color: #aaa;
-        }
-        
-        /* Floating Buttons */
-        .floating-btns {
-            position: fixed;
-            bottom: 30px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .floating-btns-right {
-            right: 30px;
-        }
-        
-        .floating-btns-left {
-            left: 30px;
-        }
-        
-        .floating-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            opacity: 0;
-            animation: slideIn 0.4s ease forwards;
-        }
-        
-        .floating-btn-right {
-            transform: translateX(50px);
-        }
-        
-        .floating-btn-left {
-            transform: translateX(-50px);
-        }
-        
-        @keyframes slideIn {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        .floating-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        }
-        
-        .to-top {
-            background-color: var(--primary-color);
-        }
-        
-        .whatsapp {
-            background-color: #25D366;
-        }
-        
-        .call {
-            background-color: var(--secondary-color);
-        }
-        
-        /* Responsive Design - IMPROVED */
-        @media (max-width: 992px) {
-            .logo h1 {
-                font-size: 1.3rem;
-            }
-            
-            nav a {
-                font-size: 0.9rem;
-                padding: 6px 10px;
-            }
-            
-            nav ul {
-                gap: 10px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                flex-wrap: wrap;
-                padding: 10px 0;
-            }
-            
-            .logo {
-                flex: 1;
-                min-width: 0;
-            }
-            
-            .logo h1 {
-                font-size: 1.2rem;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            
-            .logo-img {
-                width: 40px;
-                height: 40px;
-            }
-            
-            nav {
-                order: 3;
-                width: 100%;
-                margin-top: 10px;
-                display: none;
-            }
-            
-            nav.active {
-                display: block;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                gap: 0;
-                width: 100%;
-                background-color: white;
-                border-radius: var(--border-radius);
-                box-shadow: var(--box-shadow);
-                padding: 10px 0;
-                margin-top: 5px;
-            }
-            
-            nav a {
-                display: block;
-                padding: 12px 15px;
-                border-radius: 0;
-                font-size: 1rem;
-            }
-            
-            nav a:after {
-                display: none;
-            }
-            
-            nav a:hover, nav a.active {
-                background-color: rgba(26, 95, 180, 0.1);
-            }
-            
-            .mobile-menu-btn {
-                display: flex;
-                order: 2;
-            }
-            
-            .hero {
-                padding: 60px 0;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .services-cards, .features-grid, .services-grid, .devices-grid, .materials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .leak-types, .insulation-types {
-                grid-template-columns: 1fr;
-            }
-            
-            .floating-btns-right {
-                right: 20px;
-            }
-            
-            .floating-btns-left {
-                left: 20px;
-            }
-            
-            .floating-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero {
-                padding: 50px 0;
-            }
-            
-            .hero h1 {
-                font-size: 1.6rem;
-            }
-            
-            .section-title h2 {
-                font-size: 1.6rem;
-            }
-            
-            .service-overview-card, .feature-card, .service-card {
-                padding: 20px;
-            }
-            
-            .floating-btns-right {
-                right: 15px;
-            }
-            
-            .floating-btns-left {
-                left: 15px;
-            }
-            
-            .logo h1 {
-                font-size: 1.1rem;
-            }
-            
-            .logo-img {
-                width: 35px;
-                height: 35px;
-            }
-        }
-        
-        /* Structured Data (JSON-LD) */
-        .structured-data {
-            display: none;
-        }
     </style>
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Structured Data for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "خبراء الصيانة",
+      "url": "https://khabaramaintenance.it.com",
+      "logo": "https://khabaramaintenance.it.com/favicon.png",
+      "description": "شركة معتمدة لكشف تسربات المياه وعزل الأسطح والخزانات. خبرة 25 عاماً في حل مشاكل التسربات والعزل باختلاف شدتها وأماكن حدوثها.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الرياض",
+        "addressRegion": "منطقة الرياض",
+        "addressCountry": "SA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+966-537705361",
+        "contactType": "customer service",
+        "areaServed": "SA",
+        "availableLanguage": "ar"
+      },
+      "sameAs": []
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img">
+                <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img" width="50" height="50" loading="lazy">
                 <h1>خبراء الصيانة</h1>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">☰</button>
             <nav id="mainNav">
                 <ul>
                     <li><a href="#" class="active">الرئيسية</a></li>
@@ -1120,7 +290,6 @@
         </div>
     </header>
 
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -1129,7 +298,6 @@
             <a href="#contact" class="btn">اطلب خدمة كشف تسربات المياه الآن</a>
         </div>
     </section>
-
 
     <!-- Services Overview Section -->
     <section class="services-overview">
@@ -1488,7 +656,705 @@
             <i class="fas fa-phone"></i>
         </a>
     </div>
-
+<style>
+        /* باقي الأنماط الغير حرجة */
+        .services-overview {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--primary-color);
+            bottom: -10px;
+            right: 25%;
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-overview-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-overview-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: var(--transition);
+        }
+        
+        .service-overview-card:hover:before {
+            transform: scaleX(1);
+        }
+        
+        .service-overview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .service-overview-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+        
+        .service-overview-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        /* Water Leak Detection Section */
+        .water-leak-detection {
+            padding: 80px 0;
+            background-color: #f0f4f8;
+        }
+        
+        .leak-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .leak-type {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border-right: 4px solid var(--primary-color);
+        }
+        
+        .leak-type:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .leak-type h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Insulation Section */
+        .insulation {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .insulation-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .insulation-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .insulation-type {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .insulation-type:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .insulation-type h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .benefits-list {
+            list-style-type: none;
+            margin-top: 20px;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 10px;
+            padding-right: 25px;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .benefits-list li:hover {
+            transform: translateX(-5px);
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: #f0f4f8;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: rotateY(180deg);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        /* Services Details Section */
+        .services-details {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            background-color: var(--primary-color);
+        }
+        
+        .service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        /* Devices Section */
+        .devices {
+            padding: 80px 0;
+            background-color: #f0f4f8;
+        }
+        
+        .devices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .device-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .device-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .device-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .device-card:hover .device-icon {
+            transform: scale(1.1);
+        }
+        
+        /* Materials Section */
+        .materials {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .material-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .material-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .material-card:hover .material-icon {
+            transform: rotate(15deg);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--secondary-color), #1f8b4d);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .cta .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        .btn-light {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+        
+        .btn-light:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info h3, .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .contact-details li:hover {
+            transform: translateX(-5px);
+        }
+        
+        .contact-details i {
+            width: 20px;
+        }
+        
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group textarea, .form-group select {
+            padding: 12px;
+            border-radius: var(--border-radius);
+            border: none;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .copyright {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Floating Buttons */
+        .floating-btns {
+            position: fixed;
+            bottom: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .floating-btns-right {
+            right: 30px;
+        }
+        
+        .floating-btns-left {
+            left: 30px;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .to-top {
+            background-color: var(--primary-color);
+        }
+        
+        .whatsapp {
+            background-color: #25D366;
+        }
+        
+        .call {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .logo h1 {
+                font-size: 1.3rem;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
+                padding: 6px 10px;
+            }
+            
+            nav ul {
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+                padding: 10px 0;
+            }
+            
+            .logo {
+                flex: 1;
+                min-width: 0;
+            }
+            
+            .logo h1 {
+                font-size: 1.2rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            nav {
+                order: 3;
+                width: 100%;
+                margin-top: 10px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 0;
+                width: 100%;
+                background-color: white;
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+                padding: 10px 0;
+                margin-top: 5px;
+            }
+            
+            nav a {
+                display: block;
+                padding: 12px 15px;
+                border-radius: 0;
+                font-size: 1rem;
+            }
+            
+            nav a:after {
+                display: none;
+            }
+            
+            nav a:hover, nav a.active {
+                background-color: rgba(26, 95, 180, 0.1);
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+                order: 2;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .services-cards, .features-grid, .services-grid, .devices-grid, .materials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .leak-types, .insulation-types {
+                grid-template-columns: 1fr;
+            }
+            
+            .floating-btns-right {
+                right: 20px;
+            }
+            
+            .floating-btns-left {
+                left: 20px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 50px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .service-overview-card, .feature-card, .service-card {
+                padding: 20px;
+            }
+            
+            .floating-btns-right {
+                right: 15px;
+            }
+            
+            .floating-btns-left {
+                left: 15px;
+            }
+            
+            .logo h1 {
+                font-size: 1.1rem;
+            }
+            
+            .logo-img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
    <script type="application/ld+json">
         {
         "@context": "https://schema.org",
@@ -1566,100 +1432,84 @@
         ]
         }
     </script>
-
     <script>
         // تحسين القائمة المتنقلة
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');
         
-        mobileMenuBtn.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            this.textContent = mainNav.classList.contains('active') ? '✕' : '☰';
-        });
-        
-        // إغلاق القائمة عند النقر على رابط
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
+        if (mobileMenuBtn && mainNav) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                this.textContent = mainNav.classList.contains('active') ? '✕' : '☰';
+            });
+            
+            // إغلاق القائمة عند النقر على رابط
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.textContent = '☰';
+                    }
+                });
+            });
+            
+            // إغلاق القائمة عند تغيير حجم النافذة
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
                     mainNav.classList.remove('active');
                     mobileMenuBtn.textContent = '☰';
                 }
             });
-        });
-        
-        // إغلاق القائمة عند تغيير حجم النافذة
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                mainNav.classList.remove('active');
-                mobileMenuBtn.textContent = '☰';
-            }
-        });
+        }
 
         // Scroll to top functionality
-        document.getElementById('toTop').addEventListener('click', function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
+        const toTopBtn = document.getElementById('toTop');
+        if (toTopBtn) {
+            toTopBtn.addEventListener('click', function() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
 
-        // Show/hide scroll to top button
-        window.addEventListener('scroll', function() {
-            const toTopBtn = document.getElementById('toTop');
-            if (window.pageYOffset > 300) {
-                toTopBtn.style.display = 'flex';
-            } else {
-                toTopBtn.style.display = 'none';
-            }
-        });
-
-        // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                    observer.unobserve(entry.target);
+            // Show/hide scroll to top button
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    toTopBtn.style.display = 'flex';
+                } else {
+                    toTopBtn.style.display = 'none';
                 }
             });
-        }, observerOptions);
+        }
 
-        // Observe all animated elements
-        document.querySelectorAll('.leak-type, .insulation-type, .feature-card, .service-card, .device-card, .material-card').forEach(el => {
-            el.style.animationPlayState = 'paused';
-            observer.observe(el);
-        });
-    </script>
-    <script>
-         document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const service = document.getElementById('service').value;
-            const message = document.getElementById('message').value.trim();
-            
-            // Validate form
-            if (!name || !phone || !service || !message) {
-                showError('يرجى ملء جميع الحقول المطلوبة');
-                return;
-            }
-            
-            // Validate Saudi phone number (starts with 05 and 9 digits)
-            const phoneRegex = /^05\d{8}$/;
-            if (!phoneRegex.test(phone)) {
-                showError('يرجى إدخال رقم جوال سعودي صحيح (مثال: 0537705361)');
-                return;
-            }
-            
-            // Prepare WhatsApp message
-            const whatsappNumber = '966537705361'; // Your WhatsApp number
-            const serviceText = getServiceText(service);
-            
-            const whatsappMessage = `
+        // تحسين نموذج واتساب
+        const whatsappForm = document.getElementById('whatsappForm');
+        if (whatsappForm) {
+            whatsappForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value.trim();
+                
+                // Validate form
+                if (!name || !phone || !service || !message) {
+                    showError('يرجى ملء جميع الحقول المطلوبة');
+                    return;
+                }
+                
+                // Validate Saudi phone number (starts with 05 and 9 digits)
+                const phoneRegex = /^05\d{8}$/;
+                if (!phoneRegex.test(phone)) {
+                    showError('يرجى إدخال رقم جوال سعودي صحيح (مثال: 0537705361)');
+                    return;
+                }
+                
+                // Prepare WhatsApp message
+                const whatsappNumber = '966537705361';
+                const serviceText = getServiceText(service);
+                
+                const whatsappMessage = `
 مرحباً، أود الاستفسار عن الخدمات
 
 الاسم: ${name}
@@ -1668,90 +1518,102 @@
 الرسالة: ${message}
 
 شكراً لكم
-            `.trim();
-            
-            // Encode message for URL
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-            
-            // Create WhatsApp URL
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-            
-            // Show success message
-            showSuccess();
-            
-            // Open WhatsApp after a short delay
-            setTimeout(() => {
-                window.open(whatsappURL, '_blank');
+                `.trim();
                 
-                // Reset form
-                document.getElementById('whatsappForm').reset();
+                // Encode message for URL
+                const encodedMessage = encodeURIComponent(whatsappMessage);
                 
-                // Hide success message after 5 seconds
+                // Create WhatsApp URL
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                
+                // Show success message
+                showSuccess();
+                
+                // Open WhatsApp after a short delay
                 setTimeout(() => {
-                    hideMessages();
-                }, 5000);
-            }, 1500);
-        });
-        
-        function getServiceText(serviceValue) {
-            const services = {
-                'leak-detection': 'كشف تسربات المياه',
-                'roof-insulation': 'عزل الأسطح',
-                'tank-insulation': 'عزل الخزانات',
-                'other': 'خدمة أخرى'
-            };
-            return services[serviceValue] || 'خدمة أخرى';
-        }
-        
-        function showError(message) {
-            const errorElement = document.getElementById('errorMessage');
-            errorElement.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${message}`;
-            errorElement.style.display = 'block';
+                    window.open(whatsappURL, '_blank');
+                    
+                    // Reset form
+                    document.getElementById('whatsappForm').reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        hideMessages();
+                    }, 5000);
+                }, 1500);
+            });
             
-            // Hide success message if shown
-            document.getElementById('successMessage').style.display = 'none';
+            function getServiceText(serviceValue) {
+                const services = {
+                    'leak-detection': 'كشف تسربات المياه',
+                    'roof-insulation': 'عزل الأسطح',
+                    'tank-insulation': 'عزل الخزانات',
+                    'other': 'خدمة أخرى'
+                };
+                return services[serviceValue] || 'خدمة أخرى';
+            }
             
-            // Auto hide after 5 seconds
-            setTimeout(() => {
-                errorElement.style.display = 'none';
-            }, 5000);
-        }
-        
-        function showSuccess() {
-            const successElement = document.getElementById('successMessage');
-            successElement.style.display = 'block';
+            function showError(message) {
+                const errorElement = document.getElementById('errorMessage');
+                if (errorElement) {
+                    errorElement.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${message}`;
+                    errorElement.style.display = 'block';
+                    
+                    // Hide success message if shown
+                    const successElement = document.getElementById('successMessage');
+                    if (successElement) successElement.style.display = 'none';
+                    
+                    // Auto hide after 5 seconds
+                    setTimeout(() => {
+                        errorElement.style.display = 'none';
+                    }, 5000);
+                }
+            }
             
-            // Hide error message if shown
-            document.getElementById('errorMessage').style.display = 'none';
+            function showSuccess() {
+                const successElement = document.getElementById('successMessage');
+                if (successElement) {
+                    successElement.style.display = 'block';
+                    
+                    // Hide error message if shown
+                    const errorElement = document.getElementById('errorMessage');
+                    if (errorElement) errorElement.style.display = 'none';
+                }
+            }
+            
+            function hideMessages() {
+                const successElement = document.getElementById('successMessage');
+                const errorElement = document.getElementById('errorMessage');
+                if (successElement) successElement.style.display = 'none';
+                if (errorElement) errorElement.style.display = 'none';
+            }
+            
+            // Real-time phone number validation
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.startsWith('966')) {
+                        value = value.substring(3);
+                    }
+                    if (value.length > 0 && !value.startsWith('0')) {
+                        value = '0' + value;
+                    }
+                    if (value.length > 10) {
+                        value = value.substring(0, 10);
+                    }
+                    e.target.value = value;
+                });
+                
+                // Auto-format phone number on blur
+                phoneInput.addEventListener('blur', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length === 9 && !value.startsWith('0')) {
+                        e.target.value = '0' + value;
+                    }
+                });
+            }
         }
-        
-        function hideMessages() {
-            document.getElementById('successMessage').style.display = 'none';
-            document.getElementById('errorMessage').style.display = 'none';
-        }
-        
-        // Real-time phone number validation
-        document.getElementById('phone').addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
-            if (value.startsWith('966')) {
-                value = value.substring(3); // Remove country code if entered
-            }
-            if (value.length > 0 && !value.startsWith('0')) {
-                value = '0' + value; // Add leading zero if missing
-            }
-            if (value.length > 10) {
-                value = value.substring(0, 10); // Limit to 10 digits
-            }
-            e.target.value = value;
-        });
-        
-        // Auto-format phone number on blur
-        document.getElementById('phone').addEventListener('blur', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length === 9 && !value.startsWith('0')) {
-                e.target.value = '0' + value;
-            }
-        });
     </script>
 </body>
 </html>
