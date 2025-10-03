@@ -13,17 +13,52 @@
     <meta name="author" content="خبراء الصيانة">
     <title>خبراء الصيانة - شركة كشف تسربات المياه وعزل الأسطح والخزانات المعتمدة بالرياض</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="خبراء الصيانة - شركة كشف تسربات المياه وعزل الأسطح والخزانات">
     <meta property="og:description" content="شركة معتمدة لكشف التسربات وعزل الأسطح والخزانات. خبرة 25 عاماً في كشف وحل مشاكل التسربات والعزل.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_AR">
+    <meta property="og:image" content="https://khabaramaintenance.it.com/favicon.png">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:alt" content="شعار شركة خبراء الصيانة">
+    <meta property="og:site_name" content="خبراء الصيانة">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://khabaramaintenance.it.com/favicon.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://khabaramaintenance.it.com">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+    <!-- Structured Data for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "خبراء الصيانة",
+      "url": "https://khabaramaintenance.it.com",
+      "logo": "https://khabaramaintenance.it.com/favicon.png",
+      "description": "شركة معتمدة لكشف تسربات المياه وعزل الأسطح والخزانات. خبرة 25 عاماً في حل مشاكل التسربات والعزل باختلاف شدتها وأماكن حدوثها.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الرياض",
+        "addressRegion": "منطقة الرياض",
+        "addressCountry": "SA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+966-537705361",
+        "contactType": "customer service",
+        "areaServed": "SA",
+        "availableLanguage": "ar"
+      },
+      "sameAs": []
+    }
+    </script>
     
     <!-- Google Fonts for Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,14 +107,14 @@
             padding: 0 15px;
         }
         
-        /* Header Styles */
+        /* Header Styles - IMPROVED */
         header {
             background-color: white;
             box-shadow: var(--box-shadow);
             position: sticky;
             top: 0;
             z-index: 1000;
-            animation: slideDown 0.5s ease;
+            animation: slideDown 0.4s ease;
         }
         
         @keyframes slideDown {
@@ -95,29 +130,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 12px 0;
         }
         
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
+            flex-shrink: 0;
         }
         
         .logo h1 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--primary-color);
+            white-space: nowrap;
         }
         
-        .logo-icon {
-            font-size: 2rem;
-            color: var(--primary-color);
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 15px;
         }
         
         nav a {
@@ -128,6 +171,8 @@
             border-radius: var(--border-radius);
             transition: var(--transition);
             position: relative;
+            font-size: 0.95rem;
+            white-space: nowrap;
         }
         
         nav a:after {
@@ -156,15 +201,26 @@
             font-size: 1.5rem;
             cursor: pointer;
             color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
         }
         
-        /* Hero Section */
+        .mobile-menu-btn:hover {
+            background-color: rgba(26, 95, 180, 0.1);
+        }
+        
+        /* Hero Section - IMPROVED */
         .hero {
             background: linear-gradient(rgba(26, 95, 180, 0.8), rgba(13, 71, 161, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%231a5fb4"/><text x="50%" y="50%" font-family="Arial" font-size="60" fill="white" text-anchor="middle">خبراء الصيانة</text></svg>');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 0;
+            padding: 80px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -198,15 +254,17 @@
             }
         }
         
-        .hero h2 {
-            font-size: 2.5rem;
+        .hero h1 {
+            font-size: 2.2rem;
             margin-bottom: 20px;
+            line-height: 1.3;
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             max-width: 700px;
             margin: 0 auto 30px;
+            line-height: 1.6;
         }
         
         .btn {
@@ -246,8 +304,7 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
-        /* Services Overview Section */
-        .services-overview {
+  .services-overview {
             padding: 80px 0;
             background-color: white;
         }
@@ -850,7 +907,7 @@
             cursor: pointer;
             border: none;
             opacity: 0;
-            animation: slideIn 0.5s ease forwards;
+            animation: slideIn 0.4s ease forwards;
         }
         
         .floating-btn-right {
@@ -885,42 +942,93 @@
             background-color: var(--secondary-color);
         }
         
-        /* Responsive Design */
+        /* Responsive Design - IMPROVED */
+        @media (max-width: 992px) {
+            .logo h1 {
+                font-size: 1.3rem;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
+                padding: 6px 10px;
+            }
+            
+            nav ul {
+                gap: 10px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .header-container {
                 flex-wrap: wrap;
+                padding: 10px 0;
             }
             
             .logo {
                 flex: 1;
+                min-width: 0;
+            }
+            
+            .logo h1 {
+                font-size: 1.2rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .logo-img {
+                width: 40px;
+                height: 40px;
             }
             
             nav {
-                flex: 2;
-                display: flex;
-                justify-content: flex-end;
+                order: 3;
+                width: 100%;
+                margin-top: 10px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
             }
             
             nav ul {
-                flex-direction: row;
+                flex-direction: column;
                 text-align: center;
-                gap: 10px;
-                display: none;
-                flex-wrap: wrap;
-                justify-content: center;
+                gap: 0;
+                width: 100%;
+                background-color: white;
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+                padding: 10px 0;
+                margin-top: 5px;
             }
             
-            nav ul.show {
-                display: flex;
+            nav a {
+                display: block;
+                padding: 12px 15px;
+                border-radius: 0;
+                font-size: 1rem;
+            }
+            
+            nav a:after {
+                display: none;
+            }
+            
+            nav a:hover, nav a.active {
+                background-color: rgba(26, 95, 180, 0.1);
             }
             
             .mobile-menu-btn {
-                display: block;
+                display: flex;
                 order: 2;
             }
             
-            .hero h2 {
-                font-size: 2rem;
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
             }
             
             .hero p {
@@ -952,11 +1060,11 @@
         
         @media (max-width: 480px) {
             .hero {
-                padding: 60px 0;
+                padding: 50px 0;
             }
             
-            .hero h2 {
-                font-size: 1.8rem;
+            .hero h1 {
+                font-size: 1.6rem;
             }
             
             .section-title h2 {
@@ -975,10 +1083,13 @@
                 left: 15px;
             }
             
-            nav ul {
-                flex-direction: column;
-                width: 100%;
-                margin-top: 15px;
+            .logo h1 {
+                font-size: 1.1rem;
+            }
+            
+            .logo-img {
+                width: 35px;
+                height: 35px;
             }
         }
         
@@ -993,10 +1104,11 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <span class="logo-icon">💧</span>
+                <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img">
                 <h1>خبراء الصيانة</h1>
             </div>
-            <nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <nav id="mainNav">
                 <ul>
                     <li><a href="#" class="active">الرئيسية</a></li>
                     <li><a href="#leak-detection">كشف التسربات</a></li>
@@ -1004,10 +1116,10 @@
                     <li><a href="#services">خدماتنا</a></li>
                     <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
-                <button class="mobile-menu-btn">☰</button>
             </nav>
         </div>
     </header>
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1017,6 +1129,7 @@
             <a href="#contact" class="btn">اطلب خدمة كشف تسربات المياه الآن</a>
         </div>
     </section>
+
 
     <!-- Services Overview Section -->
     <section class="services-overview">
@@ -1349,7 +1462,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="logo">
-                    <span class="logo-icon">💧</span>
+                    <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img">
                     <h1>خبراء الصيانة</h1>
                 </div>
                 <p>شركة معتمدة لكشف التسربات وعزل الأسطح والخزانات - خبرة 25 عاماً</p>
@@ -1455,9 +1568,32 @@
     </script>
 
     <script>
-        // Simple mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
+        // تحسين القائمة المتنقلة
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            this.textContent = mainNav.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.textContent = '☰';
+                }
+            });
+        });
+        
+        // إغلاق القائمة عند تغيير حجم النافذة
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
         });
 
         // Scroll to top functionality
