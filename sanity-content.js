@@ -11,7 +11,7 @@ async function fetchSanity(query) {
 
 // Load articles
 async function loadArticles() {
-  const query = '*[_type=="article"]{title, body, "imageUrl": image.asset->url, publishedAt}';
+  const query = '*[_type=="article"]{title, content, "imageUrl": image.asset->url, _createdAt}';
   const articles = await fetchSanity(query);
 
   const container = document.getElementById('articles');
