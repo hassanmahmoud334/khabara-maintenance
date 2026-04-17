@@ -92,15 +92,22 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://khabaramaintenance.it.com">
     
-    <!-- Google Fonts for Arabic -->
+    <!-- Preconnect to critical external origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://y7i10luq.api.sanity.io">
+    
+    <!-- Google Fonts for Arabic -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <!-- Font Awesome - Optimized -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <!-- Preload critical Font Awesome fonts to reduce critical path latency -->
+    <link rel="preload" as="font" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin>
+    
+    <!-- Local stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="preload" as="script" href="sanity-content.js">
 
@@ -145,9 +152,8 @@
         </div>
     </header>
     
-    <main>
-        <!-- Hero Section with improved CTAs -->
-        <section class="hero">
+    <!-- Hero Section with improved CTAs -->
+    <section class="hero">
         <div class="container">
             <h1>شركة كشف تسربات المياه بالرياض │ عزل أسطح وخزانات</h1>
             <p><strong>كشف تسربات المياه بدون تكسير</strong> باستخدام أحدث الأجهزة الألمانية. <strong>عزل أسطح وخزانات</strong> بمواد عالية الجودة مع <strong>ضمان 10 سنوات</strong>. خدمة 24 ساعة في الرياض</p>
@@ -526,7 +532,6 @@
             </div>
         </div>
     </section>
-    </main>
 
     <!-- Footer -->
     <footer>
