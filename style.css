@@ -837,6 +837,11 @@ footer {
     border: none;
     opacity: 0;
     animation: slideIn 0.4s ease forwards;
+    text-decoration: none;
+}
+
+.floating-btn:visited {
+    color: white;
 }
 
 .floating-btn-right {

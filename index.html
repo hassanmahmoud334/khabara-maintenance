@@ -98,8 +98,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="script" href="sanity-content.js">
 
   <style>
     body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
@@ -114,7 +117,7 @@
  <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="/favicon.png" alt="شعار شركة خبراء الصيانة - كشف تسربات المياه وعزل الأسطح والخزانات" class="logo-img" width="50" height="50">
+                <img src="/favicon.png" alt="شعار شركة خبراء الصيانة - كشف تسربات المياه وعزل الأسطح والخزانات" class="logo-img" width="50" height="50" loading="lazy">
                 <div>
                     <h1>خبراء الصيانة</h1>
                     <div style="font-size: 0.9rem; color: var(--primary-color);">كشف تسربات المياه - عزل أسطح وخزانات</div>
@@ -528,7 +531,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="logo">
-                    <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img">
+                    <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img" width="50" height="50" loading="lazy">
                     <h1>خبراء الصيانة</h1>
                 </div>
                 <p>شركة معتمدة لكشف التسربات وعزل الأسطح والخزانات - خبرة 25 عاماً</p>
@@ -820,6 +823,6 @@
         });
     </script>
         <!-- Sanity Client for browser -->
-    <script src="sanity-content.js"></script>
+    <script src="sanity-content.js" async></script>
 </body>
 </html>
