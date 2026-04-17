@@ -107,11 +107,8 @@
     <!-- Font Awesome -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
-    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" as="script" href="sanity-content.js">
 
   <style>
     :root {--primary-color: #1a5fb4;--secondary-color: #26a269;--accent-color: #e01b24;--light-color: #f6f5f4;--text-color: #2e3436;--border-radius: 8px;--box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
@@ -148,7 +145,7 @@
  <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="/favicon.png" alt="شعار شركة خبراء الصيانة - كشف تسربات المياه وعزل الأسطح والخزانات" class="logo-img" width="50" height="50" loading="eager" decoding="async" fetchpriority="high">
+                <img src="/favicon.png" alt="شعار شركة خبراء الصيانة - كشف تسربات المياه وعزل الأسطح والخزانات" class="logo-img" width="50" height="50" loading="lazy">
                 <div>
                     <h1>خبراء الصيانة</h1>
                     <div style="font-size: 0.9rem; color: var(--primary-color);">كشف تسربات المياه - عزل أسطح وخزانات</div>
@@ -857,6 +854,6 @@
         });
     </script>
         <!-- Sanity Client for browser -->
-    <script src="sanity-content.js" async defer></script>
+    <script src="sanity-content.js" async></script>
 </body>
 </html>
