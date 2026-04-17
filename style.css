@@ -715,6 +715,10 @@ nav a:hover, nav a.active {
     color: white;
 }
 
+.contact .section-title h2 {
+    color: white;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
