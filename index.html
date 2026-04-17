@@ -19,8 +19,7 @@
     <meta name="author" content="خبراء الصيانة">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="50x50">
-    <link rel="preload" href="/favicon.png" as="image" type="image/png">
+    <link rel="icon" type="image/png" href="/favicon.png">
         <!-- Sitemap Reference -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     
@@ -93,12 +92,6 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://khabaramaintenance.it.com">
     
-    <!-- Performance Optimizations -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://wa.me">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" as="style">
-    
     <!-- Google Fonts for Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,34 +102,13 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="script" href="sanity-content.js">
 
   <style>
-    :root {--primary-color: #1a5fb4;--secondary-color: #26a269;--accent-color: #e01b24;--light-color: #f6f5f4;--text-color: #2e3436;--border-radius: 8px;--box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
-    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-    body{font-family:'Cairo',sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--light-color);direction:rtl;overflow-x:hidden;}
-    .container{width:90%;max-width:1200px;margin:0 auto;padding:0 15px;}
-    header{background-color:white;box-shadow:var(--box-shadow);position:sticky;top:0;z-index:1000;}
-    .header-container{display:flex;justify-content:space-between;align-items:center;padding:12px 0;}
-    .logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
-    .logo h1{font-size:1.4rem;color:var(--primary-color);white-space:nowrap;}
-    .logo-img{width:50px;height:50px;object-fit:contain;}
-    nav{display:flex;align-items:center;}nav ul{display:flex;list-style:none;gap:15px;}
-    nav a{text-decoration:none;color:var(--text-color);font-weight:600;padding:8px 12px;border-radius:var(--border-radius);font-size:0.95rem;white-space:nowrap;}
-    nav a:hover,nav a.active{color:var(--primary-color);}
-    .hero{background:linear-gradient(rgba(26,95,180,0.8),rgba(13,71,161,0.9)),#1a5fb4;color:white;padding:80px 0;text-align:center;position:relative;}
-    .hero .container{position:relative;z-index:2;}
-    .hero h1{font-size:2.2rem;margin-bottom:20px;line-height:1.3;}
-    .hero p{font-size:1.1rem;max-width:700px;margin:0 auto 30px;}
-    .btn{display:inline-block;background-color:var(--accent-color);color:white;padding:12px 30px;border-radius:var(--border-radius);text-decoration:none;font-weight:600;border:none;cursor:pointer;font-family:inherit;transition:all 0.3s ease;}
-    .btn:hover{background-color:#c4161e;transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,0.2);}
-    .section-title{text-align:center;margin-bottom:50px;}
-    .section-title h2{font-size:2rem;color:var(--primary-color);margin-bottom:15px;}
-    .section-title p{color:#555;max-width:600px;margin:0 auto;}
-    @media(max-width:768px){nav{order:3;width:100%;margin-top:10px;display:none;}nav.active{display:block;}
-    .mobile-menu-btn{display:flex;order:2;}
-    .hero h1{font-size:1.8rem;}
-    .hero p{font-size:1rem;}
-    .services-cards,.features-grid,.services-grid{grid-template-columns:1fr;}}
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+    .article, .staff { margin-bottom: 30px; }
+    img { max-width: 100%; height: auto; display: block; margin: 10px 0; }
+    hr { border: none; border-top: 1px solid #ccc; margin: 20px 0; }
   </style>
 
 </head>
@@ -173,7 +145,6 @@
         </div>
     </header>
     
-    <main>
     <!-- Hero Section with improved CTAs -->
     <section class="hero">
         <div class="container">
@@ -555,14 +526,12 @@
         </div>
     </section>
 
-    </main>
-
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="logo">
-                    <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img" width="50" height="50" loading="lazy" decoding="async" fetchpriority="low">
+                    <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img" width="50" height="50" loading="lazy">
                     <h1>خبراء الصيانة</h1>
                 </div>
                 <p>شركة معتمدة لكشف التسربات وعزل الأسطح والخزانات - خبرة 25 عاماً</p>
