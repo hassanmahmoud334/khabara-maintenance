@@ -19,7 +19,8 @@
     <meta name="author" content="خبراء الصيانة">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="50x50">
+    <link rel="preload" href="/favicon.png" as="image" type="image/png">
         <!-- Sitemap Reference -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     
@@ -92,6 +93,11 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://khabaramaintenance.it.com">
     
+    <!-- Performance Optimizations -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://wa.me">
+    
     <!-- Google Fonts for Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,9 +106,10 @@
     <!-- Font Awesome -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="style.css">
     <link rel="preload" as="script" href="sanity-content.js">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
   <style>
     body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
@@ -117,7 +124,7 @@
  <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="/favicon.png" alt="شعار شركة خبراء الصيانة - كشف تسربات المياه وعزل الأسطح والخزانات" class="logo-img" width="50" height="50" loading="lazy">
+                <img src="/favicon.png" alt="شعار شركة خبراء الصيانة - كشف تسربات المياه وعزل الأسطح والخزانات" class="logo-img" width="50" height="50" loading="lazy" decoding="async" fetchpriority="low">
                 <div>
                     <h1>خبراء الصيانة</h1>
                     <div style="font-size: 0.9rem; color: var(--primary-color);">كشف تسربات المياه - عزل أسطح وخزانات</div>
@@ -145,6 +152,7 @@
         </div>
     </header>
     
+    <main>
     <!-- Hero Section with improved CTAs -->
     <section class="hero">
         <div class="container">
@@ -526,12 +534,14 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="logo">
-                    <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img" width="50" height="50" loading="lazy">
+                    <img src="/favicon.png" alt="شعار خبراء الصيانة" class="logo-img" width="50" height="50" loading="lazy" decoding="async" fetchpriority="low">
                     <h1>خبراء الصيانة</h1>
                 </div>
                 <p>شركة معتمدة لكشف التسربات وعزل الأسطح والخزانات - خبرة 25 عاماً</p>
@@ -823,6 +833,6 @@
         });
     </script>
         <!-- Sanity Client for browser -->
-    <script src="sanity-content.js" async></script>
+    <script src="sanity-content.js" async defer></script>
 </body>
 </html>
